@@ -68,7 +68,7 @@ cells.append(md("## 1 · Load GEM Data"))
 cells.append(code("""\
 # ── Steel: plant-level ─────────────────────────────────────────────────────────
 plant_df = pd.read_excel(
-    f'{DATA_DIR}/Plant-level-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+    f'{DATA_DIR}/gem_steel_plants_2026.xlsx',
     sheet_name='Plant data')
 china_plants = plant_df[plant_df['Country/area'] == 'China'].copy()
 china_ids    = set(china_plants['GEM plant ID'])
@@ -76,7 +76,7 @@ print(f'China steel plants: {len(china_plants)}')
 
 # ── Steel: BOF units ──────────────────────────────────────────────────────────
 bof_df = pd.read_excel(
-    f'{DATA_DIR}/Steel-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+    f'{DATA_DIR}/gem_steel_units_2026.xlsx',
     sheet_name='Basic oxygen furnaces')
 china_bof = bof_df[bof_df['GEM plant ID'].isin(china_ids) &
                    (bof_df['Unit status'] == 'operating')].copy()
@@ -86,7 +86,7 @@ china_bof = china_bof.merge(china_plants[['GEM plant ID','Subnational unit','SOE
 
 # ── Steel: EAF units ──────────────────────────────────────────────────────────
 eaf_df = pd.read_excel(
-    f'{DATA_DIR}/Steel-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+    f'{DATA_DIR}/gem_steel_units_2026.xlsx',
     sheet_name='Electric arc furnaces')
 china_eaf = eaf_df[eaf_df['GEM plant ID'].isin(china_ids) &
                    (eaf_df['Unit status'] == 'operating')].copy()
@@ -96,7 +96,7 @@ china_eaf = china_eaf.merge(china_plants[['GEM plant ID','Subnational unit','SOE
 
 # ── Steel: BF units ───────────────────────────────────────────────────────────
 bf_df = pd.read_excel(
-    f'{DATA_DIR}/Iron-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+    f'{DATA_DIR}/gem_iron_units_2026.xlsx',
     sheet_name='Blast furnaces')
 china_bf = bf_df[bf_df['GEM plant ID'].isin(china_ids) &
                  (bf_df['Unit status'] == 'operating')].copy()
@@ -104,7 +104,7 @@ china_bf['cap'] = pd.to_numeric(china_bf['Current capacity (ttpa)'], errors='coe
 
 # ── Cement ────────────────────────────────────────────────────────────────────
 cem_df = pd.read_excel(
-    f'{DATA_DIR}/Global-Cement-and-Concrete-Tracker_July-2025.xlsx',
+    f'{DATA_DIR}/gem_cement_2025.xlsx',
     sheet_name='Plant Data')
 china_cem = cem_df[(cem_df['Country/Area'] == 'China') &
                    (cem_df['Operating status'] == 'operating')].copy()
@@ -115,7 +115,7 @@ china_cem['clin_cap'] = pd.to_numeric(
 
 # ── Power ─────────────────────────────────────────────────────────────────────
 pw_df = pd.read_excel(
-    f'{DATA_DIR}/Global-Integrated-Power-March-2026-II.xlsx',
+    f'{DATA_DIR}/gem_power_2026.xlsx',
     sheet_name='Power facilities')
 china_pw = pw_df[(pw_df['Country/area'] == 'China') &
                  (pw_df['Status'] == 'operating')].copy()

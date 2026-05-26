@@ -34,9 +34,9 @@ GREY   = '#636363'
 ORANGE = '#F4A582'
 
 # ── Load GEM steel unit data ───────────────────────────────────────────────────
-eaf = pd.read_excel(f'{DATA_DIR}/Steel-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+eaf = pd.read_excel(f'{DATA_DIR}/gem_steel_units_2026.xlsx',
                     sheet_name='Electric arc furnaces')
-bof = pd.read_excel(f'{DATA_DIR}/Steel-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx',
+bof = pd.read_excel(f'{DATA_DIR}/gem_steel_units_2026.xlsx',
                     sheet_name='Basic oxygen furnaces')
 
 eaf_op = eaf[eaf['Unit status'] == 'operating'].copy()
@@ -52,7 +52,7 @@ countries['total']     = countries['EAF'] + countries['BOF']
 countries['eaf_share'] = countries['EAF'] / countries['total'] * 100
 
 # ── Load GEM cement data ───────────────────────────────────────────────────────
-cem = pd.read_excel(f'{DATA_DIR}/Global-Cement-and-Concrete-Tracker_July-2025.xlsx',
+cem = pd.read_excel(f'{DATA_DIR}/gem_cement_2025.xlsx',
                     sheet_name='Plant Data')
 china_cem = cem[(cem['Country/Area'] == 'China') & (cem['Operating status'] == 'operating')].copy()
 china_cem['cem_cap']  = pd.to_numeric(

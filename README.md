@@ -24,11 +24,12 @@ This paper analyses the CBAM liability exposure of China's steel and cement sect
 ```
 ├── resources/
 │   └── data/                                             # Raw source files (GEM trackers)
-│       ├── Steel-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx
-│       ├── Iron-unit-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx
-│       ├── Plant-level-data-Global-Iron-and-Steel-Tracker-March-2026-V1.xlsx
-│       ├── Global-Cement-and-Concrete-Tracker_July-2025.xlsx
-│       ├── Global-Integrated-Power-March-2026-II.xlsx
+│       ├── gem_steel_units_2026.xlsx
+│       ├── gem_iron_units_2026.xlsx
+│       ├── gem_steel_plants_2026.xlsx
+│       ├── gem_cement_2025.xlsx
+│       ├── gem_power_2026.xlsx
+│       ├── gem_hydro_2026.xlsx
 │       └── *.html                                        # Web-archived reference pages
 ├── output/
 │   └── figures/                                          # All output plots (PNG)
