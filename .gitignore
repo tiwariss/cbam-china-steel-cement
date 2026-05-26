@@ -38,6 +38,7 @@ resources/literature/
 
 # Local-only drafts
 output/draft_complete.tex
+output/references_additions.bib
 
 # AI workspace config
 CLAUDE.md
