@@ -31,8 +31,7 @@ This paper analyses the CBAM liability exposure of China's steel and cement sect
 │       ├── Global-Integrated-Power-March-2026-II.xlsx
 │       └── *.html                                        # Web-archived reference pages
 ├── output/
-│   ├── figures/                                          # All output plots (PNG)
-│   └── references_additions.bib                         # Bibliography
+│   └── figures/                                          # All output plots (PNG)
 ├── code/
 │   ├── cbam_analysis.ipynb                              # Main analysis notebook
 │   ├── build_figures.py                                 # Standalone figure generation
