@@ -36,6 +36,9 @@ desktop.ini
 # Literature/reference PDFs (local only — not source data)
 resources/literature/
 
+# Local-only drafts
+output/draft_complete.tex
+
 # AI workspace config
 CLAUDE.md
 .claude/
