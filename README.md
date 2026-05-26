@@ -28,8 +28,7 @@ This paper analyses the CBAM liability exposure of China's steel and cement sect
 │       ├── gem_iron_units_2026.xlsx
 │       ├── gem_steel_plants_2026.xlsx
 │       ├── gem_cement_2025.xlsx
-│       ├── gem_power_2026.xlsx
-│       └── gem_hydro_2026.xlsx
+│       └── gem_power_2026.xlsx
 ├── output/
 │   └── figures/                                          # All output plots (PNG)
 ├── code/
@@ -41,15 +40,16 @@ This paper analyses the CBAM liability exposure of China's steel and cement sect
 
 ## Data Sources
 
-| Dataset | Source | Coverage |
-|---------|--------|----------|
-| Iron & Steel Tracker (unit-level) | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-steel-plant-tracker/) | March 2026 |
-| Iron & Steel Tracker (plant-level) | Global Energy Monitor | March 2026 |
-| Cement & Concrete Tracker | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-cement-and-concrete-tracker/) | July 2025 |
-| Integrated Power Tracker | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-integrated-power-tracker/) | March 2026 |
-| CN-ETS prices | MEE / Shanghai Environment & Energy Exchange | 2024 |
-| EU ETS prices | EU ETS market | 2024–2025 |
-| Emission factors | IEA ETP 2023; IPCC 2006 Vol. 3; MEE 2023 | — |
+| Dataset | File | Source | Coverage |
+|---------|------|--------|----------|
+| Iron & Steel Tracker (unit-level) | [gem_steel_units_2026.xlsx](https://github.com/tiwariss/data-archive/blob/main/cbam-china-steel-cement/gem_steel_units_2026.xlsx) | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-steel-plant-tracker/) | March 2026 |
+| Iron & Steel Tracker (plant-level) | [gem_steel_plants_2026.xlsx](https://github.com/tiwariss/data-archive/blob/main/cbam-china-steel-cement/gem_steel_plants_2026.xlsx) | Global Energy Monitor | March 2026 |
+| Iron Tracker (unit-level) | [gem_iron_units_2026.xlsx](https://github.com/tiwariss/data-archive/blob/main/cbam-china-steel-cement/gem_iron_units_2026.xlsx) | Global Energy Monitor | March 2026 |
+| Cement & Concrete Tracker | [gem_cement_2025.xlsx](https://github.com/tiwariss/data-archive/blob/main/cbam-china-steel-cement/gem_cement_2025.xlsx) | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-cement-and-concrete-tracker/) | July 2025 |
+| Integrated Power Tracker | [gem_power_2026.xlsx](https://github.com/tiwariss/data-archive/blob/main/cbam-china-steel-cement/gem_power_2026.xlsx) | [Global Energy Monitor](https://globalenergymonitor.org/projects/global-integrated-power-tracker/) | March 2026 |
+| CN-ETS prices | — | MEE / Shanghai Environment & Energy Exchange | 2024 |
+| EU ETS prices | — | EU ETS market | 2024–2025 |
+| Emission factors | — | IEA ETP 2023; IPCC 2006 Vol. 3; MEE 2023 | — |
 
 ---
 
