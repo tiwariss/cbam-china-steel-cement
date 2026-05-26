@@ -1,4 +1,4 @@
-import json, os
+﻿import json, os
 _ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def md(source):
@@ -58,6 +58,7 @@ GREY   = '#636363'
 LIGHT  = '#F7F7F7'
 
 DATA_DIR = '../resources/data'
+FIG_DIR  = '../output/figures'
 print('Setup complete ✓')
 """))
 
@@ -175,7 +176,7 @@ ax2.set_ylim(0, max(unit_caps)*1.15)
 
 plt.suptitle('China Steel Sector — Technology Structure', fontsize=13, fontweight='bold', y=1.01)
 plt.tight_layout()
-plt.savefig('fig1_steel_technology_mix.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig1_steel_technology_mix.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -216,7 +217,7 @@ ax.annotate('Hebei = 23.9%\\nof national BOF',
             fontsize=8.5, color='black',
             bbox=dict(boxstyle='round,pad=0.3', fc='#FFF3CD', ec='#FFC107', alpha=0.9))
 plt.tight_layout()
-plt.savefig('fig2_steel_provinces.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig2_steel_provinces.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -239,7 +240,7 @@ ax.set_title('Top 12 Provinces — Blast Furnace Hot Metal Capacity\\n'
              f'(China, {len(china_bf)} operating BFs, {total_bf:.0f} Mtpa total, GEM March 2026)',
              fontsize=12, fontweight='bold', pad=10)
 plt.tight_layout()
-plt.savefig('fig3_bf_provinces.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig3_bf_provinces.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -323,7 +324,7 @@ for i, (sec, ef) in enumerate(zip(sectors, ef_vals)):
 plt.suptitle('CBAM Net Liability Heatmap by Price Scenario\\n'
              '(Black contour = zero liability / full offset line)', fontsize=12, fontweight='bold')
 plt.tight_layout()
-plt.savefig('fig4_cbam_heatmap.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig4_cbam_heatmap.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -374,7 +375,7 @@ ax.texts[-2].set_y(ymax * 0.95)
 ax.texts[-1].set_y(ymax * 0.95)
 
 plt.tight_layout()
-plt.savefig('fig5_cbam_by_sector.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig5_cbam_by_sector.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -432,7 +433,7 @@ ax2.set_ylim(0, 110)
 plt.suptitle('Carbon Price Convergence and CBAM Offset Rate (2024–2030)',
              fontsize=12, fontweight='bold')
 plt.tight_layout()
-plt.savefig('fig6_price_convergence.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig6_price_convergence.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -498,7 +499,7 @@ ax2.set_xlim(0, 1.05)
 plt.suptitle('China Cement Sector — Capacity and Clinker Ratio by Province',
              fontsize=12, fontweight='bold')
 plt.tight_layout()
-plt.savefig('fig7_cement_provinces.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig7_cement_provinces.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -551,7 +552,7 @@ ax2.legend()
 plt.suptitle('Cement CCS — Current Deployment & CBAM Incentive for Investment',
              fontsize=12, fontweight='bold')
 plt.tight_layout()
-plt.savefig('fig8_cement_ccs.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig8_cement_ccs.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -628,7 +629,7 @@ ax2.text(0.98, 0.02,
 plt.suptitle('China Power Mix — Grid Emission Factor Basis',
              fontsize=12, fontweight='bold')
 plt.tight_layout()
-plt.savefig('fig9_power_mix.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig9_power_mix.png', bbox_inches='tight', dpi=150)
 plt.show()
 """))
 
@@ -721,7 +722,7 @@ ax_e.set_title(f'E · Cement CCS Status\\n({len(china_cem)} operating plants)', 
 fig.suptitle('Summary Dashboard — EU CBAM and China Industrial Decarbonization\n'
              'Data: GEM Iron & Steel Tracker (Mar 2026), GEM Cement Tracker (Jul 2025)',
              fontsize=13, fontweight='bold', y=1.01)
-plt.savefig('fig10_summary_dashboard.png', bbox_inches='tight', dpi=150)
+plt.savefig(f'{FIG_DIR}/fig10_summary_dashboard.png', bbox_inches='tight', dpi=150)
 plt.show()
 print('All figures saved.')
 """))
@@ -826,3 +827,4 @@ with open(out_path, 'w', encoding='utf-8') as f:
     json.dump(nb, f, indent=1, ensure_ascii=False)
 
 print(f'Notebook written: {out_path}')
+
