@@ -29,15 +29,11 @@ This paper analyses the CBAM liability exposure of China's steel and cement sect
 │       ├── gem_steel_plants_2026.xlsx
 │       ├── gem_cement_2025.xlsx
 │       ├── gem_power_2026.xlsx
-│       ├── gem_hydro_2026.xlsx
-│       └── *.html                                        # Web-archived reference pages
+│       └── gem_hydro_2026.xlsx
 ├── output/
 │   └── figures/                                          # All output plots (PNG)
 ├── code/
-│   ├── cbam_analysis.ipynb                              # Main analysis notebook
-│   ├── build_figures.py                                 # Standalone figure generation
-│   ├── regen_notebook_figs.py                           # Regenerate fig2, fig4, fig9
-│   └── build_notebook.py                                # Regenerate the notebook from source
+│   └── cbam_analysis.ipynb                              # Main analysis notebook
 └── paper.pdf                                             # Full paper
 ```
 
@@ -92,20 +88,9 @@ or:
 pip install -r requirements.txt
 ```
 
-**2. Main analysis notebook:**
+**2. Run the analysis notebook:**
 ```bash
 jupyter notebook code/cbam_analysis.ipynb
-```
-
-**3. Regenerate standalone figures:**
-```bash
-python code/build_figures.py
-python code/regen_notebook_figs.py
-```
-
-**4. Rebuild notebook from source:**
-```bash
-python code/build_notebook.py
 ```
 
 ---
