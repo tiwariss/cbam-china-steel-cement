@@ -36,6 +36,9 @@ desktop.ini
 # Literature/reference PDFs (local only — not source data)
 resources/literature/
 
+# Web-archived reference pages (manual reference only, not used by code)
+resources/data/*.html
+
 # Local-only drafts
 output/draft_complete.tex
 output/references_additions.bib
